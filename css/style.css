@@ -1,0 +1,336 @@
+@charset"utf-8";
+
+@font-face {
+  font-family: InterM;
+  src: url(../webfonts/Inter_24pt-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: InterSB;
+  src: url(../webfonts/Inter_24pt-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: InterB;
+  src: url(../webfonts/Inter_24pt-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: InterEB;
+  src: url(../webfonts/Inter_24pt-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: NotoR;
+  src: url(../webfonts/NotoSansKR-Regular.woff) format("woff");
+}
+
+*{margin: 0; padding: 0; text-transform: uppercase;}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+#wrap{}
+
+/* header 시작 */
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .2);
+  position: relative;
+  position: fixed; z-index: 99;
+  padding: 0 25px; box-sizing: border-box;
+}
+header .head_bg{
+  position: absolute; top: 100px; left: 0;
+  /* height: 290px; */ width: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  z-index: 98;
+}
+header ul.nav{
+  display: flex;
+  text-align: center;
+}
+header ul.nav>li{position: relative;}
+header ul.nav>li>a{
+  color: #fff;
+  line-height: 100px;
+  padding: 0 35px;
+  font-size: 17px;
+  display: block;
+  transition: color .3s;
+  font-family: InterSB;
+}
+header ul.nav>li>a:hover{
+  color: #002569;
+}
+header ul.nav .sub{
+  height: 0;
+  padding-top: 20px;
+  position: absolute; left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  overflow: hidden;
+  transition: .5s;
+}
+header ul.nav:hover .sub{
+  height: 290px;
+}
+header ul.nav .sub li a{
+  color: #222;
+  line-height: 35px;
+  font-size: 14px;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+  transition: .3s;
+  font-family: InterM, NotoR;
+}
+header ul.nav .sub li a:hover{
+  color: #002569;
+  font-weight: bold;
+}
+header ul.nav .third li a{
+  color: #777;
+  font-size: 14.5px;
+}
+header ul.right{
+  display: flex;
+  gap: 20px;
+}
+
+
+/* s0 시작 */
+.s0{
+  width: 100%; height: 100vh;
+  background: url(../images/s0_bg.jpg) center/cover no-repeat;
+}
+
+
+/* s1 시작 */
+.s1{
+  width: 100%; height: 100vh;
+  background: url(../images/s1_bg.jpg) center/cover no-repeat;
+}
+.conAll{
+  width: 80%; height: 100%;
+  display: flex; flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  padding-left: 5%; box-sizing: border-box;
+}
+.conAll .txt{
+  display: flex; flex-direction: column;
+  gap: 40px; color: #fff;
+}
+.conAll .txt h1.title{
+  font-family: InterB;
+  font-size: 120px;
+}
+.conAll .txt h4{
+  font-family: InterM;
+  font-weight: normal;
+  font-size: 60px;
+}
+.s1 .conAll .txt h4 span{color: #7DD8FF;}
+.conAll .txt p{
+  font-family: NotoR;
+  font-size: 17px;
+  line-height: 30px;
+}
+.conAll .txt p br.m{display: none;}
+.conAll .btn{
+  align-self: flex-end;
+  position: relative;
+  left: -150px;
+}
+.conAll .btn a{
+  color: #fff;
+  display: block;
+  width: 80px; height: 80px;
+  border-radius: 55px;
+  background-color: rgba(255, 255, 255, .3);
+  border: 2.5px solid #fff;
+  position: absolute;
+  transition: .5s;
+}
+.conAll .btn p{
+  position: absolute; display: inline-block;
+  line-height: 80px;
+}
+.conAll .btn p:first-child{
+  width: 0; overflow: hidden;
+  white-space: nowrap;
+  transition: .5s;
+  font-family: InterM;
+  font-size: 20px;
+  margin-left: 25px;
+}
+.conAll .btn p:last-child{
+  width: 80px; height: 80px;
+  line-height: 80px; text-align: center;
+  transition: .5s;
+}
+.conAll .btn p:last-child img{
+  vertical-align: middle;
+  width: 45%;
+  margin-top: -5px;
+}
+.conAll .btn:hover a{
+  width: 300px;
+  background-image: linear-gradient( to right, rgba(255, 255, 255, .3), rgba(0, 255, 48, .3));
+}
+.conAll .btn:hover p:first-child{
+  width: 220px; transition: .5s;
+}
+.conAll .btn:hover p:last-child{
+  transform: translateX(220px);
+  transition: .5s;
+}
+
+
+/* s2 시작 */
+.s2{
+  width: 100%; height: 100vh;
+  background: url(../images/s2_bg.jpg) center/cover no-repeat;
+}
+.s2 .conAll .txt h4 span{color: #99FFAC;}
+
+
+/* s3 시작 */
+.s3{
+  width: 100%; height: 100vh;
+  background: url(../images/s3_bg.jpg) center/cover no-repeat;
+}
+.s3 .conAll .txt h4 span{color: #99FFAC;}
+
+
+
+/* s4 시작 */
+.s4{
+  width: 100%; height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.s4 .bgTxt{
+  display: flex;
+  animation: bgTxt 3s linear infinite;
+  position: absolute;
+  top: 15%;
+}
+/* @keyframes bgTxt {
+  0%{left: 0;}
+  100%{left: 100%;}
+} */
+
+.s4 .contents{
+  width: 80%; margin: 0 auto;
+  display: flex;
+  height: 55%;
+}
+.s4 .contents li{
+  flex: 1 1 30%;
+  position: relative;
+  transition: .5s;
+}
+.s4 .contents li:hover{
+  flex: 1 0 50%;
+  /* on으로 변경하고 제이쿼리? */
+}
+.s4 .contents li h3{
+  position: absolute; left: 0; top: 0;
+  color: #fff;
+  font-family: NotoR;
+  font-weight: bold;
+}
+.s4 .contents li p{
+  width: 100%; height: 100%;
+}
+.s4 .contents li p img{
+  width: 100%; height: 100%; object-fit: cover;
+}
+.s4 .con_txt{
+  width: 80%; margin: 0 auto;
+  position: relative;
+}
+.s4 .con_txt li{
+  position: absolute;
+  left: 0; top: 30px;
+  display: flex; gap: 50px;
+}
+.s4 .con_txt li .left_txt h3{
+  font-family: InterSB;
+  font-weight: normal;
+  color: #002569;
+  font-size: 30px;
+}
+.s4 .con_txt li .left_txt p{
+  font-family: NotoR;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+
+/* s5 시작 */
+.s5{
+  width: 100%;
+  display: flex;
+}
+.s5 > div, .s5 > ul {
+  padding-top: 15%;
+  box-sizing: border-box;
+}
+.s5 .left{
+  width: 40%; height: 100vh;
+  position: sticky; top: 0;
+  background-color: #ddd;
+  color: #fff;
+  display: flex; flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  
+}
+.s5 .left h1{
+  font-family: InterEB;
+  font-size: 60px;
+  
+}
+.s5 .left p{
+  font-family: NotoR;
+  font-size: 17px;
+  line-height: 35px;
+}
+.s5 .right{
+  width: 50%; height: 100%; background-color: #eee;
+  /* display: flex; flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px; */
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-rows: 130px 100px 130px 100px 130px 100px 130px 100px 130px 100px 130px;
+  grid-template-columns: repeat(2, 35%);
+  padding: 20% 0  20% 0;
+}
+.s5 .right li{
+  /* flex-basis: 45%;
+  aspect-ratio: 1 / 1.2;*/
+  background-color: #fff;
+  border-radius: 25px;
+}
+.s5 .right li:nth-child(1){
+  grid-row: 1 / 4;
+  grid-column: 1;
+}
+.s5 .right li:nth-child(2){
+  grid-row: 3 / 6;
+  grid-column: 2;
+}
+.s5 .right li:nth-child(3){
+  grid-row: 5 / 8;
+  grid-column: 1;
+}
+.s5 .right li:nth-child(4){
+  grid-row: 7 / 10;
+  grid-column: 2;
+}
+.s5 .right li:nth-child(5){
+  grid-row: 9 / 12;
+  grid-column: 1;
+}
