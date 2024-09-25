@@ -53,4 +53,43 @@ $(function(){
   },function(){
     $(this).find("img").attr("src","images/s5 arrow_w.svg");
   });
+
+
+
+
+
+/*   document.querySelector(".s5").onscroll = function(){
+    let srcTop = document.documentElement.scrollTop;
+    console.log(srcTop);
+    if(srcTop>=0 && srcTop<500){
+      this.className="Bg1";
+    }else{
+      this.className="Bg2";
+    };
+  }; */
+  
+  $(window).scroll(function(){
+    var
+    h = $(document).scrollTop();
+    offset = $(".s5 .right li:nth-child(1)").offset().top;
+    offset2 = $(".s5 .right li:nth-child(2)").offset().top;
+    offset3 = $(".s5 .right li:nth-child(3)").offset().top;
+    offset4 = $(".s5 .right li:nth-child(4)").offset().top;
+    offset5 = $(".s5 .right li:nth-child(5)").offset().top;
+    
+    if(h > offset && h < offset2) { //특정 div가 있는 곳을 지날 때
+       $(".s5").addClass("Bg1");
+    } else if(h > offset2 && h < offset3) {
+      $(".s5").addClass("Bg2");
+    } else if(h > offset3 && h < offset4) {
+      $(".s5").addClass("Bg3");
+    }  else if(h > offset4 && h < offset5) {
+      $(".s5").addClass("Bg4");
+    } else if(h > offset5) {
+      $(".s5").addClass("Bg5");
+    } 
+    else {
+      $(".s5").addClass("Bg1");
+    }
+  });
 }); 

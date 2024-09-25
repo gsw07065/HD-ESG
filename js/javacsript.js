@@ -23,5 +23,16 @@ s4conLi.forEach(function(v,k){
 })
 
 
+/* document.querySelector(".s5").onscroll = function(){
+  let srcTop = document.documentElement.scrollTop;
+  console.log(srcTop);
+  if(srcTop>=0 && srcTop<500){
+    this.className="Bg1";
+  }else{
+    this.className="Bg2";
+  };
+};
+ */
+
 
 AOS.init();
