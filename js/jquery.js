@@ -35,4 +35,11 @@ $(function(){
   },function(){
     my2();
   });
-});
+
+
+/*   $(".s4 .contents li").mouseenter(function(){
+    $(".s4 .contents li").css("flex:1 0 20%");
+    $(this).css({flex:"1 0 50%"});
+    $(".s4 .con_txt li"[this.index]).css({opacity:"1"});
+  })*/
+}); 

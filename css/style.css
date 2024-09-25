@@ -126,6 +126,7 @@ header ul.right{
   font-family: InterM;
   font-weight: normal;
   font-size: 60px;
+  margin-bottom: 40px;
 }
 .s1 .conAll .txt h4 span{color: #7DD8FF;}
 .conAll .txt p{
@@ -225,20 +226,28 @@ header ul.right{
   height: 55%;
 }
 .s4 .contents li{
-  flex: 1 1 30%;
   position: relative;
   transition: .5s;
 }
-.s4 .contents li:hover{
+.s4 .contents li::after{
+  content: "";
+  width: 100%; height: 30%;
+  position: absolute; left: 0; top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, .4), transparent);
+}
+.s4 .contents li.on{
   flex: 1 0 50%;
-  /* on으로 변경하고 제이쿼리? */
 }
 .s4 .contents li h3{
   position: absolute; left: 0; top: 0;
+  z-index: 1;
   color: #fff;
   font-family: NotoR;
   font-weight: bold;
+  margin: 20px 30px; box-sizing: border-box;
+  transition: .5s;
 }
+.s4 .contents li h3.on{font-size: 25px;}
 .s4 .contents li p{
   width: 100%; height: 100%;
 }
@@ -252,7 +261,10 @@ header ul.right{
 .s4 .con_txt li{
   position: absolute;
   left: 0; top: 30px;
-  display: flex; gap: 50px;
+  display: flex; gap: 100px;
+  align-items: center;
+  opacity: 0;
+  transition: .3s;
 }
 .s4 .con_txt li .left_txt h3{
   font-family: InterSB;
