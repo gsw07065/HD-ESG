@@ -37,9 +37,20 @@ $(function(){
   });
 
 
-/*   $(".s4 .contents li").mouseenter(function(){
-    $(".s4 .contents li").css("flex:1 0 20%");
-    $(this).css({flex:"1 0 50%"});
-    $(".s4 .con_txt li"[this.index]).css({opacity:"1"});
-  })*/
+  $(".s5 .right li").each(function(){
+    $(this).find(".lang span").eq(0).css({color:"#99FFAC"});
+
+    $(".lang span").click(function(){
+      $(".lang span").css({color:"#fff"});
+      $(this).css({color:"#99FFAC"});
+    });
+  });
+
+ 
+
+  $(".s5 .download > span").hover(function(){
+    $(this).find("img").attr("src","images/s5 arrow_color.svg");
+  },function(){
+    $(this).find("img").attr("src","images/s5 arrow_w.svg");
+  });
 }); 
