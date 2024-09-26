@@ -29,11 +29,29 @@
 ul{list-style: none;}
 a{text-decoration: none;}
 
-#wrap{}
+#wrap{overflow-x: hidden;}
+
+
+/* fp-nav 시작 */
+#fp-nav{
+  transform: scale(1.7) !important;
+  width: 5%;
+}
+#fp-nav ul{
+  width: 100%;
+  display: flex; flex-direction: column;
+  align-items: center;
+}
+#fp-nav ul li a span{
+  background-color: #ccc !important;
+}
+#fp-nav ul li a.active span{
+  background-color: #7DD8FF !important;
+}
 
 /* header 시작 */
 header{
-  width: 100%;
+  width: 100%; height: 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +62,7 @@ header{
   transition: .3s;
 }
 header .head_bg{
-  position: absolute; top: 100px; left: 0;
+  position: absolute; top: 85px; left: 0;
   width: 100%;
   background-color: #fff;
   z-index: 98;
@@ -58,7 +76,7 @@ header ul.nav{
 header ul.nav>li{position: relative;}
 header ul.nav>li>a{
   color: #fff;
-  line-height: 100px;
+  line-height: 85px;
   padding: 0 35px;
   font-size: 17px;
   display: block;
@@ -109,13 +127,15 @@ header ul.right{
 .s1{
   width: 100%; height: 100vh;
   background: url(../images/s1_bg.jpg) center/cover no-repeat;
+  position: relative;
 }
 .conAll{
   width: 80%; height: 100%;
   display: flex; flex-direction: column;
   gap: 40px;
   justify-content: center;
-  padding-left: 5%; box-sizing: border-box;
+  padding-left: 10%; box-sizing: border-box;
+  position: relative; z-index: 5;
 }
 .conAll .txt{
   display: flex; flex-direction: column;
@@ -123,14 +143,16 @@ header ul.right{
 }
 .conAll .txt h1.title{
   font-family: InterB;
-  font-size: 120px;
+  /* font-size: 120px; */
+  font-size: 7vw;
 }
 .conAll .txt h4{
   font-family: InterM;
   font-weight: normal;
-  font-size: 60px;
+  font-size: 3.7vw;
   margin-bottom: 40px;
 }
+
 .s1 .conAll .txt h4 span{color: #7DD8FF;}
 .conAll .txt p{
   font-family: NotoR;
@@ -186,23 +208,43 @@ header ul.right{
   transform: translateX(220px);
   transition: .5s;
 }
-
+.s1 > p {position: absolute; left: 5%;top: 0;
+  width: 87%;
+  height: 100%;
+z-index: 3;}
+.s1 > p img {
+  width: 100%; height: 100%; object-fit: cover;
+}
 
 /* s2 시작 */
 .s2{
   width: 100%; height: 100vh;
   background: url(../images/s2_bg.jpg) center/cover no-repeat;
+  position: relative;
 }
 .s2 .conAll .txt h4 span{color: #99FFAC;}
-
+.s2 > p {position: absolute; left: 5%;top: 0;
+  width: 87%;
+  height: 100%;
+z-index: 3;}
+.s2 > p img {
+  width: 100%; height: 100%; object-fit: cover;
+}
 
 /* s3 시작 */
 .s3{
   width: 100%; height: 100vh;
   background: url(../images/s3_bg.jpg) center/cover no-repeat;
+  position: relative;
 }
 .s3 .conAll .txt h4 span{color: #99FFAC;}
-
+.s3 > p {position: absolute; left: 5%;top: 0;
+  width: 87%;
+  height: 100%;
+z-index: 3;}
+.s3 > p img {
+  width: 100%; height: 100%; object-fit: cover;
+}
 
 
 /* s4 시작 */
@@ -211,25 +253,26 @@ header ul.right{
   display: flex; flex-direction: column;
   justify-content: center;
   position: relative;
+  overflow-x: hidden;
 }
 .s4 .bgTxt{
   display: flex;
-  animation: bgTxt 3s linear infinite;
-  position: absolute;
-  top: 15%;
+  animation: bgTxt 20s linear 1s infinite reverse both;
+  position: absolute; z-index: 10;
+  top: 13%;
 }
-/* @keyframes bgTxt {
-  0%{left: 0;}
-  100%{left: 100%;}
-} */
+@keyframes bgTxt {
+  0%{transform: translateX(-25%);}
+  100%{transform: translateX(0%);}
+}
 
 .s4 .contents{
-  width: 80%; margin: 0 auto;
+  width: 75%; margin: 0 auto;
   display: flex;
-  height: 55%;
+  height: 50%;
 }
 .s4 .contents li{
-  position: relative;
+  position: relative; z-index: 9;
   transition: .5s;
 }
 .s4 .contents li::after{
@@ -258,8 +301,9 @@ header ul.right{
   width: 100%; height: 100%; object-fit: cover;
 }
 .s4 .con_txt{
-  width: 80%; margin: 0 auto;
-  position: relative;
+  width: 75%; margin: 0 auto;
+  position: relative; z-index: 9;
+  height: 13%;
 }
 .s4 .con_txt li{
   position: absolute;
@@ -279,44 +323,75 @@ header ul.right{
   font-family: NotoR;
   font-size: 20px;
   margin-top: 15px;
+  color: #333;
+}
+.s4 > p {
+  position: absolute; left: 5%;top: 0;
+  width: 87%; height: 100%;
+z-index: 3;}
+.s4 > p img {
+  width: 100%; height: 100%; object-fit: cover;
 }
 
 
 /* s5 시작 */
 .s5{
   width: 100%;
-  display: flex;
+  transition: .5s;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.s5 .bg{
+  position: absolute; left: 0;top: 0;
+  width: 100%; height: 100%;
+}
+.s5 .bg li{
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute; left: 0;top: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
   transition: .5s;
 }
-.s5.Bg1{
+.s5 .bg1{
   background-image: url(../images/s5_bg01.jpg);
 }
-.s5.Bg2{
+.s5 .bg2{
   background-image: url(../images/s5_bg02.jpg);
 }
-.s5.Bg3{
+.s5 .bg3{
   background-image: url(../images/s5_bg03.jpg);
 }
-.s5.Bg4{
+.s5 .bg4{
   background-image: url(../images/s5_bg04.jpg);
 }
-.s5.Bg5{
+.s5 .bg5{
   background-image: url(../images/s5_bg05.jpg);
 }
-.s5 > div, .s5 > ul {
-  padding-top: 10%;
+/* .s5 > div, .s5 > ul {
+  
+} */
+.s5 .inner{
+  width: 90%;
+  position: relative; z-index: 10;
+  display: flex; justify-content: end;
+  padding-top: 15%;
   box-sizing: border-box;
+  height: 100%;
 }
 .s5 .left{
-  width: 40%; height: 100vh;
-  position: sticky; top: 0;
+  width: 45%; min-height: 100vh;
+  position: absolute; top: 0; left: 0;
+  overflow: hidden;
   color: #fff;
   display: flex; flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 30px;
+  transition: .5s;
 }
 .s5 .left h1{
   font-family: InterEB;
@@ -329,14 +404,13 @@ header ul.right{
   line-height: 35px;
 }
 .s5 .right{
-  width: 50%;
+  width: 45%;
   display: flex; flex-wrap: wrap;
   justify-content: space-between;
 }
 .s5 .right li{
   flex-basis: 42%;
   aspect-ratio: 1 / 1.1;
-  background-color: #fff;
   border-radius: 25px;
   padding: 40px 30px;
   box-sizing: border-box;
@@ -361,6 +435,11 @@ header ul.right{
 .s5 .right li .middle{
   text-align: center;
   font-size: 0;
+  margin: 20px auto;
+  width: 45%; min-width: 80px;
+}
+.s5 .right li .middle img{
+  width: 100%; object-fit: cover;
 }
 .s5 .right li .bottom{
   display: flex; flex-direction: column;
@@ -369,7 +448,8 @@ header ul.right{
 }
 .s5 .right li .bottom p{
   font-family: NotoR;
-  font-size: 23px;
+  font-size: 22px;
+  color: #222;
 }
 .s5 .right li .bottom .download{
   font-family: InterR;
@@ -407,7 +487,6 @@ header ul.right{
 footer{
   width: 100%; background-color: #002569;
   padding: 70px 100px; box-sizing: border-box;
-
 }
 footer .top{
   display: flex;
@@ -425,9 +504,15 @@ footer .top .left{
   display: flex; flex-direction: column;
   color: #fff;
 }
+footer .top .left .foot_logo{
+  max-width: 200px;
+}
+footer .top .left .foot_logo img{
+  width: 100%; object-fit: cover;
+}
 footer .top .left ul{margin-top: 15px;}
 footer .top .left ul li{
-  font-size: 14px;
+  font-size: 13.5px;
   font-family: NotoR;
   line-height: 25px;
 }
@@ -439,13 +524,14 @@ footer .top .foot_nav a{
 }
 footer .top .foot_nav>li>a{
   font-family: InterSB;
+  font-size: 15px;
 }
 footer .top .foot_nav .sub{
   margin-top: 15px;
 }
 footer .top .foot_nav .sub a{
   font-family: InterR, NotoR;
-  font-size: 14.5px;
+  font-size: 14px;
   line-height: 30px;
 }
 footer .bottom{
@@ -456,7 +542,7 @@ footer .bottom{
   font-size: 15px;
 }
 footer .bottom > p{
-  color: #999;
+  color: #fff;
   
 }
 footer .bottom div{
@@ -471,4 +557,76 @@ footer .bottom div p:last-child{
 }
 footer .bottom div p:last-child span{
   margin-left: 40px;
+}
+
+
+/* top버튼 시작 */
+a#MOVE_TOP_BTN{
+  position: fixed;
+  right: 2.2%;
+  bottom: 20%;
+  display: none;
+  z-index: 999;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url(../images/top_40X40.png);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+}
+
+
+
+
+
+@media screen and (max-width:1376px) {
+  /* s1 시작 */
+/*   .conAll .txt h1.title{
+    font-size: 110px;
+  } */
+/*   .s1 > p {
+    width: 85%;
+  }
+  .s1 > p img{
+  } */
+
+  /* footer 시작 */
+  footer{
+   padding: 50px 100px;
+  }
+  footer .top{
+    flex-direction: column;
+  }
+  footer .top .left{
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  footer .top .left ul{
+    margin-top: 0;
+    margin-left: 50px;
+  }
+  footer .top .foot_nav{
+    justify-content: space-between;
+    padding: 0 50px; 
+  }
+  footer .top .foot_nav .sub{display: none;}
+}
+
+
+@media screen and (max-width:1280px){
+  /* header 시작 */
+  header ul.nav{display: none;}
+    /* s1 시작 */
+/*     .conAll .txt h1.title{
+      font-size: 90px;
+    } */
+}
+@media screen and (max-width:1280px){
+  /* header 시작 */
+  header ul.nav{display: none;}
+    /* s1 시작 */
+/*     .conAll .txt h1.title{
+      font-size: 90px;
+    } */
 }

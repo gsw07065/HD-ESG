@@ -56,40 +56,99 @@ $(function(){
 
 
 
-
-
-/*   document.querySelector(".s5").onscroll = function(){
-    let srcTop = document.documentElement.scrollTop;
-    console.log(srcTop);
-    if(srcTop>=0 && srcTop<500){
-      this.className="Bg1";
-    }else{
-      this.className="Bg2";
-    };
-  }; */
-  
+  //s5 스크롤이벤트
   $(window).scroll(function(){
     var
     h = $(document).scrollTop();
-    offset = $(".s5 .right li:nth-child(1)").offset().top;
-    offset2 = $(".s5 .right li:nth-child(2)").offset().top;
-    offset3 = $(".s5 .right li:nth-child(3)").offset().top;
-    offset4 = $(".s5 .right li:nth-child(4)").offset().top;
-    offset5 = $(".s5 .right li:nth-child(5)").offset().top;
+    offset = $(".s5 .right li:nth-child(1)").offset().top - (400);
+    offset2 = $(".s5 .right li:nth-child(2)").offset().top - (400);
+    offset3 = $(".s5 .right li:nth-child(3)").offset().top - (400);
+    offset4 = $(".s5 .right li:nth-child(4)").offset().top - (400);
+    offset5 = $(".s5 .right li:nth-child(5)").offset().top - (400);
+    offset6 = $(".s5 .right li:nth-child(5)").offset().top - (20);
     
     if(h > offset && h < offset2) { //특정 div가 있는 곳을 지날 때
-       $(".s5").addClass("Bg1");
+      $(".bg li").css({opacity:"0"});
+      $(".bg1").css({opacity:"1"});
+      $(".s5 .right li").css("background-color","rgba(255, 255, 255, .5)");
+      $(".s5 .right li:nth-child(1)").css("background-color","rgba(255, 255, 255, 1)");
+      $(".s5 .left").css({position:"fixed"});
     } else if(h > offset2 && h < offset3) {
-      $(".s5").addClass("Bg2");
+      $(".s5").css({background:"none"});
+      $(".bg li").css({opacity:"0"});
+      $(".bg2").css({opacity:"1"});
+      $(".s5 .right li").css("background-color","rgba(255, 255, 255, .5)");
+      $(".s5 .right li:nth-child(2)").css("background-color","rgba(255, 255, 255, 1)");
+      $(".s5 .left").css({position:"fixed"});
     } else if(h > offset3 && h < offset4) {
-      $(".s5").addClass("Bg3");
+      $(".s5").css({background:"none"});
+      $(".bg li").css({opacity:"0"});
+      $(".bg3").css({opacity:"1"});
+      $(".s5 .right li").css("background-color","rgba(255, 255, 255, .5)");
+      $(".s5 .right li:nth-child(3)").css("background-color","rgba(255, 255, 255, 1)");
+      $(".s5 .left").css({position:"fixed"});
     }  else if(h > offset4 && h < offset5) {
-      $(".s5").addClass("Bg4");
-    } else if(h > offset5) {
-      $(".s5").addClass("Bg5");
-    } 
-    else {
-      $(".s5").addClass("Bg1");
+      $(".s5").css({background:"none"});
+      $(".bg li").css({opacity:"0"});
+      $(".bg4").css({opacity:"1"});
+      $(".s5 .right li").css("background-color","rgba(255, 255, 255, .5)");
+      $(".s5 .right li:nth-child(4)").css("background-color","rgba(255, 255, 255, 1)");
+      $(".s5 .left").css({position:"fixed"});
+    } else if(h > offset5 && h < offset6) {
+      $(".s5").css({background:"none"});
+      $(".bg li").css({opacity:"0"});
+      $(".bg5").css({opacity:"1"});
+      $(".s5 .right li").css("background-color","rgba(255, 255, 255, .5)");
+      $(".s5 .right li:nth-child(5)").css("background-color","rgba(255, 255, 255, 1)");
+    } else{
+      $(".bg li").css({opacity:"0"});
+      $(".bg1").css({opacity:"1"});
+      $(".s5 .right li").css("background-color","rgba(255, 255, 255, .5)");
+      $(".s5 .right li:nth-child(1)").css("background-color","rgba(255, 255, 255, 1)");
+      $(".s5 .left").css({position:"absolute"});
     }
   });
-}); 
+
+
+ //fullpage
+  $('#fullpage').fullpage({
+    navigation:true,
+    verticalCentered: true,
+    scrollBar: true,
+    normalScrollElements: '.scrollable-element',
+    afterLoad: function(origin, destination, direction) {
+  if ($(".sec5").hasClass("active")) { 
+    $.fn.fullpage.setScrollingSpeed(0); // 속도 조정
+      $.fn.fullpage.setAllowScrolling(false);
+      $("#section5").css("overflowY","scroll");
+    
+  } else {
+      // 나머지 페이지는 다시 FullPage.js 사용
+      $.fn.fullpage.setScrollingSpeed(1000);
+      $.fn.fullpage.setAllowScrolling(true);
+    }
+  }
+  });
+
+
+
+  //top버튼 이동
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 500) {
+    $('#MOVE_TOP_BTN').fadeIn();
+    } else {
+    $('#MOVE_TOP_BTN').fadeOut();
+    }
+  });
+  $("#MOVE_TOP_BTN").click(function() {
+  $('html, body').animate({
+  scrollTop : 0
+  }, 400);
+  return false;
+  });
+
+
+});
+
+
+
