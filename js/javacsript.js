@@ -7,6 +7,7 @@ function my3(){
     v.querySelector("h3").classList.remove("on");
   });
   s4contxtLi.forEach(function(v){
+    v.style.display="none";
     v.style.opacity="0";
   });
 }
@@ -17,10 +18,20 @@ s4conLi.forEach(function(v,k){
   v.onmouseenter = function(){
     my3();
     this.classList.add("on");
+    s4contxtLi[k].style.display="flex";
     s4contxtLi[k].style.opacity="1";
     v.querySelector("h3").classList.add("on");
   }
+  v.onclick = function(){
+    my3();
+    this.classList.add("on");
+    s4contxtLi[k].style.display="flex";
+    s4contxtLi[k].style.opacity="1";
+    s4contxtLi[k].style.zIndex="5";
+    v.querySelector("h3").classList.add("on");
+  }
 })
+
 
 
 

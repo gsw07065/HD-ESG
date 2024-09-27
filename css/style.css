@@ -145,6 +145,7 @@ header ul.right{
   font-family: InterB;
   /* font-size: 120px; */
   font-size: 7vw;
+  line-height: 180px;
 }
 .conAll .txt h4{
   font-family: InterM;
@@ -290,10 +291,15 @@ z-index: 3;}
   color: #fff;
   font-family: NotoR;
   font-weight: bold;
-  margin: 20px 30px; box-sizing: border-box;
+  padding: 20px 30px; box-sizing: border-box;
   transition: .5s;
+  width: 100%;
+  text-align: center;
 }
-.s4 .contents li h3.on{font-size: 25px;}
+.s4 .contents li h3.on{
+  font-size: 25px;
+  text-align: left;
+}
 .s4 .contents li p{
   width: 100%; height: 100%;
 }
@@ -321,14 +327,15 @@ z-index: 3;}
 }
 .s4 .con_txt li .left_txt p{
   font-family: NotoR;
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 15px;
   color: #333;
 }
 .s4 > p {
   position: absolute; left: 5%;top: 0;
   width: 87%; height: 100%;
-z-index: 3;}
+  z-index: 3;
+}
 .s4 > p img {
   width: 100%; height: 100%; object-fit: cover;
 }
@@ -385,7 +392,6 @@ z-index: 3;}
 .s5 .left{
   width: 45%; min-height: 100vh;
   position: absolute; top: 0; left: 0;
-  overflow: hidden;
   color: #fff;
   display: flex; flex-direction: column;
   justify-content: center;
@@ -396,12 +402,13 @@ z-index: 3;}
 .s5 .left h1{
   font-family: InterEB;
   font-size: 60px;
-  
+  width: 100%;
 }
 .s5 .left p{
   font-family: NotoR;
   font-size: 17px;
   line-height: 35px;
+  width: 100%;
 }
 .s5 .right{
   width: 45%;
@@ -431,6 +438,7 @@ z-index: 3;}
   justify-content: space-between;
   color: #222;
   font-family: InterB;
+  /* font-size: 16px; */
 }
 .s5 .right li .middle{
   text-align: center;
@@ -448,7 +456,9 @@ z-index: 3;}
 }
 .s5 .right li .bottom p{
   font-family: NotoR;
-  font-size: 22px;
+  /* font-size: 22px; */
+  font-size: 1.5vw;
+  letter-spacing: -1px;
   color: #222;
 }
 .s5 .right li .bottom .download{
@@ -617,16 +627,200 @@ a#MOVE_TOP_BTN{
 @media screen and (max-width:1280px){
   /* header 시작 */
   header ul.nav{display: none;}
-    /* s1 시작 */
-/*     .conAll .txt h1.title{
-      font-size: 90px;
-    } */
+
+  /* s1 시작 */
+  .conAll .txt h1.title{
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .conAll .txt h4{
+    font-size: 45px;
+  }
+  .conAll .txt p{
+    font-size: 16px;
+  }
+  .conAll .btn a{
+    width: 70px; height: 70px;
+  }
+  .conAll .btn p{
+    line-height: 70px;
+  }
+  .conAll .btn p:first-child{
+    font-size: 16px;
+  }
+  .conAll .btn p:last-child{
+    width: 70px; height: 70px;
+    line-height: 70px;
+  }
+  .conAll .btn:hover a{
+    width: 250px;
+  }
+  .conAll .btn:hover p:first-child{
+    width: 180px;
+  }
+  .conAll .btn:hover p:last-child{
+    transform: translateX(180px);
+  }
+  
+  /* s4 시작 */
+  .s4 .contents li{
+    flex: 1 1 calc(100% / 3);
+  }
+  .s4 .contents li.on{
+    flex: 1 1 calc(100% / 3);
+  }
+  .s4 .contents li h3.on{
+    font-size: 18.7px;
+    text-align: center;
+    color:#99FFAC
+  }
+  .s4 .con_txt li .left_txt h3{
+    font-size: 25px;
+  }
+  .s4 .con_txt li .left_txt p{
+    font-size: 16px;
+    /* margin-top: 15px; */
+  }
+  .s4 .con_txt li a img{
+    width: 85%; height: 85%;
+  }
+
+  /* s5 시작 */
+  .s5 .left h1{
+    font-family: InterEB;
+    font-size: 50px;
+    text-align: left;
+  }
+  .s5 .left p{font-size: 15px;}
 }
-@media screen and (max-width:1280px){
-  /* header 시작 */
-  header ul.nav{display: none;}
-    /* s1 시작 */
-/*     .conAll .txt h1.title{
-      font-size: 90px;
-    } */
+
+@media screen and (max-width:900px){
+  /* s1 시작 */
+  .conAll .txt h1.title{
+    font-size: 60px; line-height: 60px;
+    position: relative;
+  }
+  .conAll .txt h1.title::before{
+    content: "";
+    position: absolute; left: 0; top: -40px;
+    width: 140px; height: 7px;
+    background-color: #fff;
+  }
+  .conAll .txt h4{font-size: 35px;}
+  .conAll .txt p br.m{display: block;}
+  .s1 > p{display: none;}
+  .s2 > p{display: none;}
+  .s3 > p{display: none;}
+  .s4 > p{display: none;}
+  .conAll .btn a{
+    width: 60px; height: 60px;
+  }
+  .conAll .btn p{
+    line-height: 60px;
+  }
+  .conAll .btn p:first-child{
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  .conAll .btn p:last-child{
+    width: 60px; height: 60px;
+    line-height: 60px;
+  }
+  .conAll .btn:hover a{
+    width: 220px;
+  }
+  .conAll .btn:hover p:last-child{
+    transform: translateX(165px);
+  }
+
+  /* s4 시작 */
+  .s4 .con_txt li{
+    gap: 60px;
+  }
+  .s4 .contents li h3{
+    font-size: 16px;
+  }
+  .s4 .contents li h3.on{
+    font-size: 16px;
+  }
+  .s4 .con_txt li .left_txt h3{
+    font-size: 22px;
+  }
+  .s4 .con_txt li .left_txt p{
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .s4 .con_txt li a img{
+    width: 85%; height: 85%;
+  }
+}
+
+
+@media screen and (max-width:768px){
+  /* s1 시작 */
+  .conAll .txt h1.title{
+    font-size: 45px; line-height: 45px;
+  }
+  .conAll .txt h1.title::before{
+    top: -35px; width: 95px; height: 6px;
+  }
+  .conAll .txt h4{font-size: 29px;}
+  .conAll .txt p{
+    font-size: 14.5px;
+    letter-spacing: -1px;
+    line-height: 25px;
+  }
+  .conAll .btn{
+    left: -100%;
+  }
+
+  /* s4 시작 */
+  .s4 .contents{
+    margin: 0;
+    width: 88%;
+    flex-direction: column;
+    height: 50%;
+  }
+  .s4 .contents li{
+    height: calc(100% / 3);
+  }
+  .s4 .contents li h3{
+    padding: 10px 30px;
+  }
+  .s4 .con_txt{width: 80%;}
+  .s4 .con_txt li{
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+  .s4 .con_txt li .left_txt h3{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .s4 .con_txt li .left_txt p{
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (max-width:500px){
+  /* s1 시작 */
+  .conAll .txt h1.title{
+    font-size: 38px; line-height: 38px;
+  }
+  .conAll .txt h1.title::before{
+    top: -25px; width: 85px; height: 5px;
+  }
+  .conAll .txt h4{font-size: 25px;}
+
+  /* s4시작 */
+  .s4 .contents{
+    width: 85%;
+  }
+  .s4 .con_txt li .left_txt h3{
+    font-size: 18px;
+  }
 }
