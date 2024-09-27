@@ -100,6 +100,7 @@ $(function(){
       $(".bg5").css({opacity:"1"});
       $(".s5 .right li").css("background-color","rgba(255, 255, 255, .5)");
       $(".s5 .right li:nth-child(5)").css("background-color","rgba(255, 255, 255, 1)");
+      $(".s5 .left").css({position:"fixed"});
     } else{
       $(".bg li").css({opacity:"0"});
       $(".bg1").css({opacity:"1"});
