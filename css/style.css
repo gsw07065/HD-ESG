@@ -58,7 +58,7 @@ header{
   background-color: rgba(0, 0, 0, .2);
   position: relative;
   position: fixed; z-index: 99;
-  padding: 0 25px; box-sizing: border-box;
+  padding: 0 50px; box-sizing: border-box;
   transition: .3s;
 }
 header .head_bg{
@@ -68,7 +68,10 @@ header .head_bg{
   z-index: 98;
   transition: .5s;
 }
-header .logo{cursor: pointer;}
+header .logo{
+  cursor: pointer;
+  font-size: 0;
+}
 header ul.nav{
   display: flex;
   text-align: center;
@@ -78,7 +81,7 @@ header ul.nav>li>a{
   color: #fff;
   line-height: 85px;
   padding: 0 35px;
-  font-size: 17px;
+  font-size: 16px;
   display: block;
   transition: color .3s;
   font-family: InterSB;
@@ -113,6 +116,7 @@ header ul.nav .third li a{
 header ul.right{
   display: flex;
   gap: 20px;
+  font-size: 0;
 }
 
 
@@ -121,7 +125,43 @@ header ul.right{
   width: 100%; height: 100vh;
   background: url(../images/s0_bg.jpg) center/cover no-repeat;
 }
-
+.s0 .con{
+  width: 90%; height: 100%; margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+.s0 p{
+  margin-left: -5%;
+  margin-top: 250px;
+  width: 700px;
+  height: 100%;
+}
+.s0 p img{
+  height: 100%; object-fit: contain;
+}
+.s0 .text{
+  margin-left: -9%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+}
+.s0 .text h3{
+  margin-left: 5px;
+  font-family: InterSB;
+  font-size: 25px;
+  letter-spacing: 32px;
+  line-height: 55px;
+}
+.s0 .text h1{
+  font-family: InterB;
+  font-size: 100px;
+  line-height: 100px;
+}
+.s0 .text h1.green{
+  color: #99FFAC;
+  letter-spacing: 2px;
+}
 
 /* s1 시작 */
 .s1{
@@ -386,7 +426,7 @@ z-index: 3;}
   box-sizing: border-box;
   height: 100%;
 }
-.s5 .left{
+.s5 .le{
   width: 45%; min-height: 100vh;
   position: absolute; top: 0; left: 0;
   color: #fff;
@@ -396,12 +436,13 @@ z-index: 3;}
   gap: 30px;
   transition: .5s;
 }
-.s5 .left h1{
+.s5 .left_M{display: none;}
+.s5 .le h1{
   font-family: InterEB;
   font-size: 60px;
   width: 100%;
 }
-.s5 .left p{
+.s5 .le p{
   font-family: NotoR;
   font-size: 17px;
   line-height: 35px;
@@ -435,7 +476,6 @@ z-index: 3;}
   justify-content: space-between;
   color: #222;
   font-family: InterB;
-  /* font-size: 16px; */
 }
 .s5 .right li .middle{
   text-align: center;
@@ -454,7 +494,7 @@ z-index: 3;}
 .s5 .right li .bottom p{
   font-family: NotoR;
   /* font-size: 22px; */
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   letter-spacing: -1px;
   color: #222;
 }
@@ -587,17 +627,6 @@ a#MOVE_TOP_BTN{
 
 
 @media screen and (max-width:1376px) {
-  /* s1 시작 */
-/*   .conAll .txt h1.title{
-    font-size: 110px;
-  } */
-/*   .s1 > p {
-    width: 85%;
-  }
-  .s1 > p img{
-  } */
-
-
   /* s5 시작 */
   .s5 .right{
     width: 50%;
@@ -630,23 +659,19 @@ a#MOVE_TOP_BTN{
   }
   footer .top .foot_nav{
     justify-content: space-between;
-    padding: 0 50px; 
+    padding: 0 50px;
   }
   footer .top .foot_nav .sub{display: none;}
 }
 
-
-@media screen and (max-width:1280px){
-  /* header 시작 */
-  header ul.nav{display: none;}
-
+@media screen and (max-width:1300px){
   /* s1 시작 */
   .conAll .txt h1.title{
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 7vw;
+    line-height: 12vw;
   }
   .conAll .txt h4{
-    font-size: 45px;
+    font-size: 4vw;
   }
   .conAll .txt p{
     font-size: 16px;
@@ -672,6 +697,31 @@ a#MOVE_TOP_BTN{
   }
   .conAll .btn:hover p:last-child{
     transform: translateX(180px);
+  }
+  .s1 > p {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width:1280px){
+  /* header 시작 */
+  header ul.nav{display: none;}
+
+  /* s0 시작 */
+  .s0 p{
+    width: 600px;
+  }
+  .s0 .text{
+    margin-left: -12%;
+  }
+  .s0 .text h3{
+    font-size: 23px;
+    letter-spacing: 28px;
+    line-height: 50px;
+  }
+  .s0 .text h1{
+    font-size: 90px;
+    line-height: 85px;
   }
   
   /* s4 시작 */
@@ -721,7 +771,27 @@ a#MOVE_TOP_BTN{
 }
 
 @media screen and (max-width:1150px){
+  /* s0 시작 */
+  .s0 p{
+    margin-top: 200px;
+    width: 550px;
+  }
+  .s0 .text{
+    margin-left: -15%;
+  }
+  .s0 .text h3{
+    font-size: 20px;
+    line-height: 45px;
+  }
+  .s0 .text h1{
+    font-size: 85px;
+    line-height: 80px;
+  }
+
   /* s5 시작 */
+  .s5 .left{
+    padding-left: 30px; box-sizing: border-box;
+  }
   .s5 .right{
     width: 42%;
     gap: 100px;
@@ -749,14 +819,48 @@ a#MOVE_TOP_BTN{
     align-items: center;
   }
   .s5 .right li .bottom p{
-    font-size: 21px;
+    font-size: 1.7vw;
   }
   .s5 .right li .bottom .download{
     margin: 0;
   }
+  .s5 .left p{
+    font-size: 14px; line-height: 25px;
+  }
+}
+
+@media screen and (max-width:1020px){
+  /* s0 시작 */
+  .s0 .text{
+    margin-left: -22%;
+  }
+  .s0 .text h3{
+    font-size: 19px;
+    letter-spacing: 24px;
+  }
+  .s0 .text h1{
+    font-size: 75px;
+    line-height: 70px;
+  }
+
+  /* footer 시작 */
+  footer .top .foot_nav{
+    display: none;
+  }
+  footer .top .left{
+    margin-bottom: 0;
+  }
+  footer .bottom{font-size: 14px;}
 }
 
 @media screen and (max-width:900px){
+  /* s0 시작 */
+  .s0 p{
+    margin-left: -12%;
+  }
+  .s0 .text{
+    margin-left: -30%;
+  }
   /* s1 시작 */
   .conAll .txt h1.title{
     font-size: 60px; line-height: 60px;
@@ -815,10 +919,90 @@ a#MOVE_TOP_BTN{
   .s4 .con_txt li a img{
     width: 85%; height: 85%;
   }
+
+  /* s5 시작 */
+  .s5 .left{
+    width: 50%;
+  }
+  .s5 .le h1{
+    font-size: 45px;
+  }
+  .s5 .le p{font-size: 13px;}
+  .s5 .right li .bottom{
+    flex-direction: column;
+  }
+  .s5 .right li .bottom p{
+    font-size: 16px;
+  }
+
+  /* footer 시작 */
+  footer{
+    padding: 40px 70px;
+   }
+  footer .top{
+    margin-bottom: 50px;
+  }
+  footer .top::after{
+    bottom: -25px;
+  }
+  footer .bottom{
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .bottom div{
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+  }
 }
 
 
 @media screen and (max-width:768px){
+  /* header 시작 */
+  header{
+    height: 65px;
+  }
+  header .logo{
+    width: 130px;
+  }
+  header .logo img{
+    width: 100%; object-fit: cover;
+  }
+  header .right li:first-child{width: 18px;}
+  header .right li:last-child{width: 40px;}
+  header .right li a{
+    display: block; width: 100%;
+    line-height: 21px;
+  }
+  header .right li a img{
+    width: 100%; object-fit: cover;
+    vertical-align: middle;
+  }
+
+  /* s0 시작 */
+  .s0 p{
+    width: 650px;
+    margin-top: 400px;
+    margin-left: -30%;
+  }
+  .s0 .text{
+    position: absolute;
+    right: 5%; top: 17%;
+    margin-left: 0;
+  }
+  .s0 .text h3{
+    /* font-size: 19px; */
+    letter-spacing: 22px;
+    /* line-height: 45px; */
+  }
+  .s0 .text h1{
+    font-size: 70px;
+    /* line-height: 70px; */
+  }
+  .s0 .text h1.green{
+    /* letter-spacing: 2px; */
+  }
+
   /* s1 시작 */
   .conAll .txt h1.title{
     font-size: 45px; line-height: 45px;
@@ -865,10 +1049,73 @@ a#MOVE_TOP_BTN{
   .s4 .con_txt li .left_txt p{
     font-size: 14px;
   }
+
+  /* s5 시작 */
+  .s5 .inner{
+    justify-content: center;
+  }
+  .s5 .left{
+    display: none;
+    opacity: 0;
+  }
+  .s5 .left_M{
+    width: 80%;
+    top: 100px;
+    display:block;
+    justify-content: start;
+    align-items: start;
+    padding-left: 10%;
+  }
+  .s5 .left_M h1{
+    font-size: 55px;
+    line-height: 90px;
+  }
+  .s5 .le p{
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .s5 .right{
+    width: 65%;
+    z-index: 10;
+    margin-top: 250px;
+  }
+  .s5 .right li .middle{
+    width: 25%;
+  }
+  .s5 .right li .bottom p{
+    font-size: 18px;
+  }
+
+  /* footer 시작 */
+  footer .top .left ul {
+    margin-left: 30px;
+  }
+  footer .top .left ul li{
+    font-size: 13px;
+    word-break: keep-all;
+  }
 }
 
 
 @media screen and (max-width:500px){
+  /* s0 시작 */
+  .s0 p{
+    width: 550px;
+    margin-top: 280px;
+    margin-left: -50%;
+  }
+  .s0 .text{
+    right: 10%; top: 18%;
+  }
+  .s0 .text h3{
+    font-size: 16px;
+    letter-spacing: 16.5px;
+  }
+  .s0 .text h1{
+    font-size: 55px;
+    line-height: 55px;
+  }
+
   /* s1 시작 */
   .conAll .txt h1.title{
     font-size: 38px; line-height: 38px;
@@ -884,5 +1131,66 @@ a#MOVE_TOP_BTN{
   }
   .s4 .con_txt li .left_txt h3{
     font-size: 18px;
+  }
+
+  /* s5 시작 */
+  .s5 .left_M h1{
+    font-size: 38px;
+  }
+  .s5 .left_M p{
+    font-size: 12.5px;
+    letter-spacing: -1px;
+  }
+  .s5 .right li{
+    padding: 25px 30px;
+  }
+  .s5 .right li .top{
+    font-size: 13.5px;
+  }
+  .s5 .right li .bottom p{
+    font-size: 16px;
+  }
+
+  /* footer 시작 */
+  footer {
+    padding: 30px;
+}
+  footer .top .left{
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .top .left ul{
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  footer .bottom{font-size: 12px;}
+  footer .bottom div p:first-child{
+    width: 80px;
+  }
+  footer .bottom div p:first-child img{
+    width: 100%; object-fit: cover;
+  }
+}
+@media screen and (max-width:460px){
+  /* s1 시작 */
+  .conAll .txt h1.title{
+    font-size: 34px;
+  }
+  .conAll .txt h4{font-size: 23px;}
+  .conAll .txt p{
+    font-size: 13px;
+  }
+  
+  /* s4시작 */
+  .s4 .con_txt li .left_txt h3{
+    font-size: 16px;
+  }
+  .s4 .con_txt li .left_txt p{
+    font-size: 12px;
+  }
+
+  /* footer 시작 */
+  footer .bottom div p:last-child span {
+    margin-left: 3vw;
   }
 }
