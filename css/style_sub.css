@@ -175,6 +175,9 @@ header ul.right{
 .s1 .right{
   width: 30%;
 }
+.s1 .right>p{
+  font-size: 0; border-radius: 15px; overflow: hidden;
+}
 .s1 .right p img{
   width: 100%; object-fit: cover;
 }
