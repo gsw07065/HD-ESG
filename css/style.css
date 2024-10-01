@@ -854,14 +854,7 @@ a#MOVE_TOP_BTN{
   footer .bottom{font-size: 14px;}
 }
 
-@media screen and (max-width:900px){
-  /* s0 시작 */
-  .s0 p{
-    margin-left: -12%;
-  }
-  .s0 .text{
-    margin-left: -35%;
-  }
+@media screen and (max-width:950px) {
   /* s1 시작 */
   .conAll .txt h1.title{
     font-size: 60px; line-height: 60px;
@@ -879,6 +872,17 @@ a#MOVE_TOP_BTN{
   .s2 > p{display: none;}
   .s3 > p{display: none;}
   .s4 > p{display: none;}
+}
+
+@media screen and (max-width:900px){
+  /* s0 시작 */
+  .s0 p{
+    margin-left: -12%;
+  }
+  .s0 .text{
+    margin-left: -35%;
+  }
+  
   .conAll .btn a{
     width: 60px; height: 60px;
   }
