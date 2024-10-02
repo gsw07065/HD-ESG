@@ -29,7 +29,10 @@
 ul{list-style: none;}
 a{text-decoration: none;}
 
-#wrap{overflow-x: hidden;}
+#wrap{
+  overflow-x: hidden;
+  transition: .5s;
+}
 
 
 /* fp-nav 시작 */
@@ -69,7 +72,6 @@ header .head_bg{
   transition: .5s;
 }
 header .logo{
-  cursor: pointer;
   font-size: 0;
 }
 header ul.nav{
@@ -118,6 +120,7 @@ header ul.right{
   gap: 20px;
   font-size: 0;
 }
+.headM{display: none;}
 
 
 /* s0 시작 */
@@ -706,7 +709,84 @@ a#MOVE_TOP_BTN{
 
 @media screen and (max-width:1280px){
   /* header 시작 */
-  header ul.nav{display: none;}
+  header{display: none;}
+  .headM{display: block;}
+  .top {
+    display: flex; line-height: 85px; padding: 0 30px; box-sizing: border-box;
+    position: relative;
+  }
+  .top .logo img{
+    vertical-align: middle;
+  }
+  .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+  }
+  .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .side{
+    height: 100%;
+    width: 80%;
+    transform: translateX(100%);
+    background-color: #fff;
+    transition: transform 250ms ease-in-out;
+    position: fixed;
+    right: 0; margin-top: -85px;
+    padding: 30px; box-sizing: border-box;
+    display: flex; justify-content: space-between; padding-right: 15%; 
+  }
+  .side .btn>li p{
+    cursor: pointer;
+    display: inline-block;
+    line-height: 50px;
+  }
+  .side .sub{
+    height: 0; overflow: hidden;
+    transition: .5s;
+  }
+  .side .sub a{
+    color: #555;
+    line-height: 30px;
+  }
+  .side .sub.on{
+    height: 130px;
+  }
+  .side .btn>li:nth-child(1) .sub.on{
+    height: 210px;
+  }
+  .side .btn>li:nth-child(2) .sub.on,
+  .side .btn>li:nth-child(3) .sub.on{
+    height: 90px;
+  }
+  .side .btn>li:nth-child(4) .sub.on{
+    height: 60px;
+  }
+  .side .icon{display: flex; gap: 30%;}
 
   /* s0 시작 */
   .s0 p{
@@ -831,6 +911,11 @@ a#MOVE_TOP_BTN{
 }
 
 @media screen and (max-width:1020px){
+  /* header 시작 */
+  .side{
+    padding-right: 20%; 
+  }
+
   /* s0 시작 */
   .s0 .text{
     margin-left: -27%;
@@ -972,7 +1057,7 @@ a#MOVE_TOP_BTN{
 @media screen and (max-width:768px){
   /* header 시작 */
   header{
-    height: 65px;
+    height: 65px; padding: 0 20px;
   }
   header .logo{
     width: 130px;
@@ -990,6 +1075,30 @@ a#MOVE_TOP_BTN{
     width: 100%; object-fit: cover;
     vertical-align: middle;
   }
+  .top {
+    line-height: 65px;
+  }
+  .hamburger-lines {
+    height: 20px;
+    width: 27px;
+    right: 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .hamburger-lines .line {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+  }
+  .side{
+    flex-direction: column;
+    margin-top: -65px;
+  }
+  .side .icon{display: flex; gap: 30px;}
 
   /* s0 시작 */
   .s0 p{
@@ -1003,16 +1112,10 @@ a#MOVE_TOP_BTN{
     margin-left: 0;
   }
   .s0 .text h3{
-    /* font-size: 19px; */
     letter-spacing: 22px;
-    /* line-height: 45px; */
   }
   .s0 .text h1{
     font-size: 70px;
-    /* line-height: 70px; */
-  }
-  .s0 .text h1.green{
-    /* letter-spacing: 2px; */
   }
 
   /* s1 시작 */
