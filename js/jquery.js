@@ -48,8 +48,8 @@ $(function(){
 
 /*   if($(".side").css({transform:"translateX(0)"})){
     $(".headM .hamburger-lines .line").css({backgroundColor:"#002569"});
-  }; */
-
+  };
+ */
   //1280 밑 헤더
   let bool = true;
       $(".hamburger-lines").click(function(){
@@ -65,9 +65,18 @@ $(function(){
           $(".line2").css({transform:"scaleY(1)"}).css({backgroundColor:"#fff"});
           $(".line3").css({transform:"rotate(0)"}).css({backgroundColor:"#fff"});
           $(".side").css({transform:"translateX(100%)"});
-        }
+        };
         bool=!bool;
       });
+
+      /* let bool5 = $(".side").hasClass("on"); */
+/*       $(".headM .side .btn>li p").click(function(){
+        if($(".side").hasClass("on")===true){
+          $(this).css("font-family", "InterB");
+        }else{
+          $(this).css("font-family", "InterSB");
+        };
+      }); */
 
 
   $(window).resize(function(){

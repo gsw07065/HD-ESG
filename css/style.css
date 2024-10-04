@@ -758,13 +758,18 @@ a#MOVE_TOP_BTN{
     position: fixed;
     right: 0; margin-top: -85px;
     padding: 30px; box-sizing: border-box;
-    display: flex; justify-content: space-between; padding-right: 15%; 
+    display: flex; justify-content: space-between; padding-right: 15%;
   }
   .headM .side .btn>li p{
     cursor: pointer;
     display: inline-block;
     line-height: 50px;
+    font-family: InterSB;
+    color: #002569;
   }
+/*   .headM .side .btn>li p:hover{
+    font-family: InterB;
+  } */
   .headM .side .sub{
     height: 0; overflow: hidden;
     transition: .5s;
@@ -772,9 +777,19 @@ a#MOVE_TOP_BTN{
   .headM .side .sub a{
     color: #555;
     line-height: 30px;
+    font-family: InterM, NotoR;
+    font-size: 15px;
+    transition: .3s;
+  }
+  .headM .side .sub a:hover{
+    color: #38C3FF;
   }
   .headM .side .sub.on{
     height: 130px;
+  }
+  .headM .side .third a{
+    font-size: 14px;
+    color: #999;
   }
   .headM .side .btn>li:nth-child(1) .sub.on{
     height: 210px;
@@ -912,7 +927,7 @@ a#MOVE_TOP_BTN{
 
 @media screen and (max-width:1020px){
   /* header 시작 */
-  .side{
+  .headM .side{
     padding-right: 20%; 
   }
 
@@ -1094,11 +1109,11 @@ a#MOVE_TOP_BTN{
     width: 100%;
     background: #fff;
   }
-  .side{
+  .headM .side{
     flex-direction: column;
     margin-top: -65px;
   }
-  .side .icon{display: flex; gap: 30px;}
+  .headM .side .icon{display: flex; gap: 30px;}
 
   /* s0 시작 */
   .s0 p{
