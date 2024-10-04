@@ -36,6 +36,27 @@ $(function(){
     my2();
   });
 
+   //1280 밑 헤더
+   let bool = true;
+   $(".hamburger-lines").click(function(){
+     if(bool){
+       $("#wrap").css({opacity:".2"});
+       $(".line1").css({transform:"rotate(45deg)"}).css({backgroundColor:"#002569"});
+       $(".line2").css({transform:"scaleY(0)"}).css({backgroundColor:"#002569"});
+       $(".line3").css({transform:"rotate(-45deg)"}).css({backgroundColor:"#002569"});
+       $(".side").css({transform:"translateX(0)"});
+     }else{
+       $("#wrap").css({opacity:"1"});
+       $(".line1").css({transform:"rotate(0)"}).css({backgroundColor:"#fff"});
+       $(".line2").css({transform:"scaleY(1)"}).css({backgroundColor:"#fff"});
+       $(".line3").css({transform:"rotate(0)"}).css({backgroundColor:"#fff"});
+       $(".side").css({transform:"translateX(100%)"});
+     };
+     bool=!bool;
+   });
+
+
+
  //fullpage
   $('#fullpage').fullpage({
     verticalCentered: true,
@@ -77,6 +98,9 @@ $(function(){
   
 
 });
+
+
+
 
 
 
