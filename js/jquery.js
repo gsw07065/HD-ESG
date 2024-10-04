@@ -32,9 +32,23 @@ $(function(){
 
   $("header .logo").hover(function(){
     my();
+    $(".headM .hamburger-lines .line").css({backgroundColor:"#002569"});
   },function(){
     my2();
+    $(".headM .hamburger-lines .line").css({backgroundColor:"#fff"});
   });
+
+/*   $(".headM .hamburger-lines").hover(function(){
+    my();
+    $(".headM .hamburger-lines .line").css({backgroundColor:"#002569"});
+  },function(){
+    my2();
+    $(".headM .hamburger-lines .line").css({backgroundColor:"#fff"});
+  }); */
+
+/*   if($(".side").css({transform:"translateX(0)"})){
+    $(".headM .hamburger-lines .line").css({backgroundColor:"#002569"});
+  }; */
 
   //1280 밑 헤더
   let bool = true;

@@ -711,11 +711,11 @@ a#MOVE_TOP_BTN{
   /* header 시작 */
   header{display: none;}
   .headM{display: block;}
-  .top {
+  .headM .top {
     display: flex; line-height: 85px; padding: 0 30px; box-sizing: border-box;
     position: relative;
   }
-  .top .logo img{
+  .headM .top .logo img{
     vertical-align: middle;
   }
   .hamburger-lines {
@@ -749,7 +749,7 @@ a#MOVE_TOP_BTN{
     transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
   }
-  .side{
+  .headM .side{
     height: 100%;
     width: 80%;
     transform: translateX(100%);
@@ -760,33 +760,33 @@ a#MOVE_TOP_BTN{
     padding: 30px; box-sizing: border-box;
     display: flex; justify-content: space-between; padding-right: 15%; 
   }
-  .side .btn>li p{
+  .headM .side .btn>li p{
     cursor: pointer;
     display: inline-block;
     line-height: 50px;
   }
-  .side .sub{
+  .headM .side .sub{
     height: 0; overflow: hidden;
     transition: .5s;
   }
-  .side .sub a{
+  .headM .side .sub a{
     color: #555;
     line-height: 30px;
   }
-  .side .sub.on{
+  .headM .side .sub.on{
     height: 130px;
   }
-  .side .btn>li:nth-child(1) .sub.on{
+  .headM .side .btn>li:nth-child(1) .sub.on{
     height: 210px;
   }
-  .side .btn>li:nth-child(2) .sub.on,
-  .side .btn>li:nth-child(3) .sub.on{
+  .headM .side .btn>li:nth-child(2) .sub.on,
+  .headM .side .btn>li:nth-child(3) .sub.on{
     height: 90px;
   }
-  .side .btn>li:nth-child(4) .sub.on{
+  .headM .side .btn>li:nth-child(4) .sub.on{
     height: 60px;
   }
-  .side .icon{display: flex; gap: 30%;}
+  .headM .side .icon{display: flex; gap: 30%;}
 
   /* s0 시작 */
   .s0 p{
@@ -1075,7 +1075,7 @@ a#MOVE_TOP_BTN{
     width: 100%; object-fit: cover;
     vertical-align: middle;
   }
-  .top {
+  .headM .top {
     line-height: 65px;
   }
   .hamburger-lines {
