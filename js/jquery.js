@@ -217,6 +217,29 @@ $(function(){
 
 
 
+//자바스크립트인데 여기로 기재해야 첫번째 슬라이드 작동됨
+ //s0 swiper
+ let swiperLi = document.querySelectorAll(".mySwiper .swiper-wrapper .swiper-slide");
+  var swiper = new Swiper(".mySwiper", {
+    effect: "fade",
+    speed: 1000,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    on: {
+      slideChange: function(){
+        for(let i=0; i<3; i++){
+          swiperLi[i].querySelector("p.bg img").classList.remove("on");
+          swiperLi[i].querySelector(".text h3").classList.remove("on");
+          swiperLi[i].querySelector(".maintxt").classList.remove("on");
+        }
+        swiperLi[this.realIndex].querySelector("p.bg img").classList.add("on");
+        swiperLi[this.realIndex].querySelector(".text h3").classList.add("on");
+        swiperLi[this.realIndex].querySelector(".maintxt").classList.add("on");
+      }
+    }
+  });
   
 
 });

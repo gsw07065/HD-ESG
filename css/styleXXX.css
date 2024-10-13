@@ -126,17 +126,7 @@ header ul.right{
 /* s0 시작 */
 .s0{
   width: 100%; height: 100vh;
-}
-.s0 .swiper-slide p.bg{
-  position: absolute; left: 0; top: 0;
-  width: 100%; height: 100%;
-}
-.s0 .swiper-slide p.bg img{
-  width: 100%; height: 100%; object-fit: cover;
-  transform: scale(1.1); transition: 4s;
-}
-.s0 .swiper-slide p.bg img.on{
-  transform: scale(1);
+  background: url(../images/s0_bg.jpg) center/cover no-repeat;
 }
 .s0 .con{
   width: 90%; height: 100%; margin: 0 auto;
@@ -146,46 +136,32 @@ header ul.right{
   color: #fff;
   position: relative;
 }
-.s0 p.main{
+.s0 p{
+  margin-left: -5%;
+  margin-top: 250px;
+  width: 700px;
   height: 100%;
-  margin-left: -100px;
 }
-.s0 p.main img{
+.s0 p img{
   width: 100%;
   height: 100%; object-fit: contain;
 }
 .s0 .text{
   margin-left: -9%;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
-  overflow: hidden;
 }
 .s0 .text h3{
   margin-left: 5px;
   font-family: InterSB;
-  font-size: 27px;
-  letter-spacing: 41px;
+  font-size: 25px;
+  letter-spacing: 32px;
   line-height: 55px;
-  margin-bottom: -100px; opacity: 0;
-  transition: 1s;
-}
-.s0 .text h3.on{
-  margin-bottom: 0; opacity: 1;
-}
-.s0 .text .maintxt{
-  margin-bottom: -200px; opacity: 0;
-  transition: .5s;
-}
-.s0 .text .maintxt.on{
-  margin-bottom: 0; opacity: 1;
-  
-  transition: margin-bottom 1s 1s, opacity 1s 1s;
 }
 .s0 .text h1{
   font-family: InterB;
-  font-size: 120px;
-  line-height: 110px;
+  font-size: 100px;
+  line-height: 100px;
 }
-
 .s0 .text h1.green{
   color: #99FFAC;
   letter-spacing: 2px;
@@ -323,7 +299,6 @@ z-index: 3;}
   justify-content: center;
   position: relative;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 .s4 .bgTxt{
   display: flex;
@@ -654,35 +629,8 @@ a#MOVE_TOP_BTN{
 
 
 
-@media screen and (max-width:1440px){
-  .s0 .text h3{
-    margin-left: 5px;
-    font-size: 23px;
-    letter-spacing: 33px;
-    line-height: 40px;
-  }
-  .s0 .text h1{
-    font-size: 100px;
-    line-height: 100px;
-  }
-}
-
-
 
 @media screen and (max-width:1376px) {
-  /* s0 시작 */
-  .s0 .text h3{
-    padding-left: -70px;
-    font-size: 24px;
-    letter-spacing: 27px;
-    margin-bottom: -20px;
-  }
-  .s0 .text h1{
-    padding-left: -70px;
-    font-size: 90px;
-    line-height: 85px;
-  }
-
   /* s5 시작 */
   .s5 .right{
     width: 50%;
@@ -856,8 +804,8 @@ a#MOVE_TOP_BTN{
   .headM .side .icon{display: flex; gap: 30%;}
 
   /* s0 시작 */
-  .s0 p.main{
-    height: 85%;
+  .s0 p{
+    width: 650px;
   }
   .s0 .text{
     margin-left: -12%;
@@ -920,13 +868,12 @@ a#MOVE_TOP_BTN{
 
 @media screen and (max-width:1150px){
   /* s0 시작 */
-  .s0 p.main{
+  .s0 p{
     margin-top: 200px;
     width: 650px;
-    margin-left: -200px;
   }
   .s0 .text{
-    margin-left: -10%;
+    margin-left: -17%;
   }
   .s0 .text h3{
     font-size: 20px;
@@ -986,12 +933,11 @@ a#MOVE_TOP_BTN{
 
   /* s0 시작 */
   .s0 .text{
-    margin-left: -15%;
+    margin-left: -27%;
   }
   .s0 .text h3{
     font-size: 19px;
     letter-spacing: 24px;
-    line-height: 40px;
   }
   .s0 .text h1{
     font-size: 75px;
@@ -1030,7 +976,7 @@ a#MOVE_TOP_BTN{
 
 @media screen and (max-width:900px){
   /* s0 시작 */
-  .s0 p.main{
+  .s0 p{
     margin-left: -12%;
   }
   .s0 .text{
@@ -1170,7 +1116,7 @@ a#MOVE_TOP_BTN{
   .headM .side .icon{display: flex; gap: 30px;}
 
   /* s0 시작 */
-  .s0 p.main{
+  .s0 p{
     width: 650px;
     margin-top: 400px;
     margin-left: -30%;
@@ -1182,7 +1128,6 @@ a#MOVE_TOP_BTN{
   }
   .s0 .text h3{
     letter-spacing: 22px;
-    line-height: 35px;
   }
   .s0 .text h1{
     font-size: 70px;
@@ -1284,7 +1229,7 @@ a#MOVE_TOP_BTN{
 
 @media screen and (max-width:500px){
   /* s0 시작 */
-  .s0 p.main{
+  .s0 p{
     width: 550px;
     margin-top: 280px;
     margin-left: -50%;
